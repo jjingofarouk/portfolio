@@ -682,9 +682,17 @@ h3.my-profession {
   cursor: pointer;
 }
 
-.portfolio .portfolio-item-innner .portfolio-img img {
+.portfolio .portfolio-item-inner {
+  position: relative;
+  overflow: hidden; /* Ensures the image doesn't overflow the container */
+  width: 100%; /* Ensure the container takes up full width */
+  height: auto; /* Keeps the height proportionate to the width */
+}
+
+.portfolio .portfolio-item-inner .portfolio-img img {
   width: 100%;
-  display: block;
+  height: auto; /* Ensures the image keeps its aspect ratio */
+  object-fit: cover; /* Ensures the image fills the container without distortion */
 }
 
 /* Portfolio End */
